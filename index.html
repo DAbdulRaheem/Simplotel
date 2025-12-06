@@ -497,7 +497,95 @@ nav {
       font-size: 28px;
   }
 }
-  </style>
+@media (min-width: 1025px) and (max-width: 1441px){
+  /* ---------------------------------------------------- */
+  /* GLOBAL/CONTAINER ADJUSTMENTS */
+  /* ---------------------------------------------------- */
+  /* Remove fixed left margin and center the max-width containers */
+  nav,
+  .hero-wrapper,
+  .grid-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1300px; /* Slightly reduced maximum width */
+  }
+
+  /* ---------------------------------------------------- */
+  /* NAVBAR */
+  /* ---------------------------------------------------- */
+  nav {
+      padding: 1rem 30px;
+  }
+  
+  .nav-links {
+      /* Adjust link spacing for this width */
+      width: 600px; 
+  }
+  
+  /* ---------------------------------------------------- */
+  /* HERO SECTION */
+  /* ---------------------------------------------------- */
+  .hero-wrapper {
+      /* Maintain side-by-side layout (default flex-direction: row) */
+      flex-direction: row; 
+      height: 600px; /* Maintain defined height */
+  }
+
+  .hero-left {
+      /* Adjust padding for side-by-side view */
+      padding: 100px 50px;
+      text-align: left; /* Text alignment should be left for row layout */
+      align-items: flex-start;
+  }
+  
+  .hero-left h1 {
+      font-size: 42px; /* Slight reduction */
+  }
+  
+  .hero-left p {
+      /* Remove mobile/tablet centering margins */
+      margin-left: 0;
+      max-width: 450px;
+  }
+
+  .hero-right {
+      /* Ensure image remains full height on the right */
+      height: 100%;
+  }
+
+  /* ---------------------------------------------------- */
+  /* GRID SECTION */
+  /* ---------------------------------------------------- */
+  .grid-wrapper {
+      /* Maintain side-by-side layout (default flex-direction: row) */
+      flex-direction: row;
+      height: 650px; /* Maintain defined height */
+      padding: 40px; 
+      align-items: center; /* Center items vertically */
+      gap: 50px;
+  }
+
+  .grid-images {
+      /* Ensure grid uses 1fr logic (2 columns, 2 rows) */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      /* Remove temporary margin offsets */
+      margin-left: 0;
+      /* Adjust max-width and height to balance with content box */
+      height: 200px; 
+  }
+  
+  .grid-content {
+      /* Ensure text is left-aligned, matching the image positioning */
+      text-align: left;
+      align-self: center;
+      width: 400px; 
+      max-width: none;
+      height: auto;
+  }
+}
+</style>
 
 </head>
 <body>
